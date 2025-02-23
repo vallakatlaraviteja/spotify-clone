@@ -4,102 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Music Player</title>
-    <link rel="stylesheet" href="style.css">
+    <title>register</title>
+    <link rel="stylesheet" href="style1.css">
     <link rel="icon" href="favicon.svg" type="svg">
 </head>
 
 <body>
-    <div class="banner">
-        <div class="left-banner">
-            <img class="left-img" src="images/image.png" alt="left-banner-img">
-            <div class="heading">
-                <h1>Deep Focus</h1>
-                <p>Keep your focus and enjoy the serenity</p>
+    <div class="wrapper">
+        <h2>SignUp</h2>
+        <form action="">
+            <div class="input-box">
+                <label for="username"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#c9c9c9">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
+                    </svg></label>
+                <input type="text" name="username" id="username" placeholder="UserName" >
             </div>
-        </div>
+            <div class="input-box">
+                <label for="email"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#ffffff">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z" />
+                    </svg></label>
+                <input type="email" name="email" id="signUpEmail" placeholder="email">
+            </div>
+            <div class="input-box">
+                <label for="password"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#c9c9c9">
+                        <path
+                            d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z" />
+                    </svg></label>
+                <input type="password" name="password" id="signUpPassword" placeholder="Password">
+            </div>
+            <button type="submit" id="submit"> SignUp</button>
+            <div class="login">
+                Already Have an Account?<a href="login.html">login</a>
+            </div>
+        </form>
     </div>
+    <script type="module" src="../UI.js" defer></script>
 
-    <div class="main-section">
-        <div class="controls" onclick="playaudio()" id="play-pause">
-            <img class="play-img" src="images/play-button.svg" alt="play-img">
-        </div>
-        <audio id="song"></audio>
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Duration</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="song1" onclick="playAll(1)">
-                    <td>1</td>
-                    <td>Inthalo Ennenni Vinthalo (Male)</td>
-                    <td>Naresh Iyer</td>
-                    <td>04:20</td>
-                </tr>
-                <tr id="song2" onclick="playAll(2)">
-                    <td>2</td>
-                    <td>Aankhon ke darmiyaan</td>
-                    <td>Rishab Tiwari</td>
-                    <td>02:53</td>
-                </tr>
-                <tr id="song3" onclick="playAll(3)">
-                    <td>3</td>
-                    <td>Ik vaari Aa</td>
-                    <td>Arijit Singh</td>
-                    <td>04:34</td>
-                </tr>
-                <tr id="song4" onclick="playAll(4)">
-                    <td>4</td>
-                    <td>chal chalo chalo</td>
-                    <td>Raghu Dixit</td>
-                    <td>05:08</td>
-                </tr>
-                <tr id="song5" onclick="playAll(5)">
-                    <td>5</td>
-                    <td>Rise up</td>
-                    <td>TheFatRat</td>
-                    <td>02:49</td>
-                </tr>
-                <tr id="song6" onclick="playAll(6)">
-                    <td>6</td>
-                    <td>people</td>
-                    <td>libianca</td>
-                    <td>02:17</td>
-                </tr>
-                <tr id="song7" onclick="playAll(7)">
-                    <td>7</td>
-                    <td>Peaky Blinder</td>
-                    <td>Otnicka</td>
-                    <td>00:30</td>
-                </tr>
-                <tr id="song8" onclick="playAll(8)">
-                    <td>8</td>
-                    <td>Namo Namo shankara</td>
-                    <td>Amit Trivedi</td>
-                    <td>00:30</td>
-                </tr>
-                <tr id="song9" onclick="playAll(9)">
-                    <td>9</td>
-                    <td>Let Me Down Slowly</td>
-                    <td>Alec Benjamin</td>
-                    <td>02:55</td>
-                </tr>
-                <tr id="song10" onclick="playAll(10)">
-                    <td>10</td>
-                    <td>I Hate You! I Love You!</td>
-                    <td>Gnash ft.olivi</td>
-                    <td>03:47</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <script src="script.js" defer></script>
 </body>
-
 </html>

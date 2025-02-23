@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const user = userCredential.user;
           console.log("Signed in user:", user);
           localStorage.setItem('loggedInUserId', user.uid);
-          window.location.href = "../index.html";
+          window.location.href = "home.html";
         })
         .catch((error) => {
           const errorCode = error.code;
