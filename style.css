@@ -126,6 +126,7 @@ tr:hover {
   th,
   td {
     padding: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .controls img {
