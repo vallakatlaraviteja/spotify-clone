@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #179041, #191414);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+.banner {
+  background-image: url("images/banner1.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 18rem;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.left-banner {
+  display: flex;
+  align-items: center;
+}
+
+.left-img {
+  width: 8rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.heading h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.main-section {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.controls img {
+  width: 4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.controls img:hover {
+  transform: scale(1.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+th {
+  font-size: 1.1rem;
+  color: #1db954;
+}
+
+tr:hover {
+  background-color: rgba(29, 185, 84, 0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .left-banner {
+    flex-direction: column;
+  }
+
+  .left-img {
+    width: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-section {
+    padding: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.7rem;
+  }
+
+  .controls img {
+    width: 3rem;
+  }
+}
