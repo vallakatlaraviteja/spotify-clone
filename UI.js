@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
           console.log("Signed in user:", user);
           localStorage.setItem('loggedInUserId', user.uid);
           window.location.href = "home.html";
+          return false;
         })
         .catch((error) => {
           const errorCode = error.code;
