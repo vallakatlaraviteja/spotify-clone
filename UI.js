@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const user = userCredential.user;
           console.log("Signed in user:", user);
           localStorage.setItem("loggedInUserId", user.uid);
-          window.location.href = "/spotify-clone/home.html";
+          window.location.href = "https://vallakatlaraviteja.github.io/spotify-clone/home.html";
         })
         .catch((error) => {
           const errorCode = error.code;
