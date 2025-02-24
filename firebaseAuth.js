@@ -61,9 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const userData = { email, username };
         const docRef = doc(db, "users", user.uid);
         await setDoc(docRef, userData);
-        setTimeout(() => {
-          window.location.href = "login.html";
-        }, 500);
+        console.log("User registered and data saved");
+        window.location.assign("./login.html");
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -113,9 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const user = userCredential.user;
         console.log("Signed in user:", user);
         localStorage.setItem("loggedInUserId", user.uid);
-        setTimeout(() => {
-          window.location.href = "home.html";
-        }, 500);
+        window.location.assign("./home.html");
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
