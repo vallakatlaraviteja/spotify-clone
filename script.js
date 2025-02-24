@@ -4,6 +4,7 @@ function playAll(songnumber) {
   var songFileName = `music/${songnumber}.mp3`;
   var currentRow = document.getElementById(`song${songnumber}`);
 
+  
   document
     .querySelectorAll("tr")
     .forEach((row) => row.classList.remove("playing"));
