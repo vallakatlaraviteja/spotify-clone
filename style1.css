@@ -121,3 +121,11 @@ button {
 input::placeholder {
   color: rgba(0, 0, 0, 0.839);
 }
+
+#guest {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 700;
+  display: flex;
+  gap: 7px;
+}
