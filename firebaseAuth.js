@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const docRef = doc(db, "users", user.uid);
         await setDoc(docRef, userData);
         console.log("User registered and data saved");
-        window.location.assign("./login.html");
+        window.location.href = "/spotify-clone/login.html";
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const user = userCredential.user;
         console.log("Signed in user:", user);
         localStorage.setItem("loggedInUserId", user.uid);
-        window.location.assign("./home.html");
+        window.location.href = "/spotify-clone/home.html";
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
