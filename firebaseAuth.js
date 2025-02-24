@@ -42,9 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (!navigator.onLine) {
-        alert(
-          "No internet connection. Please check your network and try again."
-        );
+        alert("No internet connection. Please check your network and try again.");
         return;
       }
 
@@ -52,17 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const db = getFirestore();
 
       try {
-        const userCredential = await createUserWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
         const userData = { email, username };
         const docRef = doc(db, "users", user.uid);
         await setDoc(docRef, userData);
-        console.log("User registered and data saved");
-        window.location.href = "/spotify-clone/login.html";
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 500);
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -95,24 +90,20 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Signing in with:", email, password);
 
       if (!navigator.onLine) {
-        alert(
-          "No internet connection. Please check your network and try again."
-        );
+        alert("No internet connection. Please check your network and try again.");
         return;
       }
 
       const auth = getAuth();
 
       try {
-        const userCredential = await signInWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
         console.log("Signed in user:", user);
         localStorage.setItem("loggedInUserId", user.uid);
-        window.location.href = "/spotify-clone/home.html";
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 500);
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
