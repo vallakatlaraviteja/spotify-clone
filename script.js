@@ -32,12 +32,16 @@ function playaudio() {
   var audio = document.getElementById("song");
   var playBtn = document.getElementById("play-pause");
 
-  if (audio.paused) {
-    audio.play();
-    playBtn.innerHTML = '<img src="images/pause-button.svg">';
+  if (!audio.getAttribute("src") || audio.getAttribute("src") === "") {
+    playAll(1);
   } else {
-    audio.pause();
-    playBtn.innerHTML = '<img src="images/play-button.svg">';
+    if (audio.paused) {
+      audio.play();
+      playBtn.innerHTML = '<img src="images/pause-button.svg">';
+    } else {
+      audio.pause();
+      playBtn.innerHTML = '<img src="images/play-button.svg">';
+    }
   }
 }
 
